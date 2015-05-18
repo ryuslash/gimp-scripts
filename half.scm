@@ -25,6 +25,9 @@
   (gimp-displays-flush)
   image)
 
+(define (unretina-all)
+  (for-each unretina (vector->list (cadr (gimp-image-list)))))
+
 (script-fu-register "half"
                     "Halfsize image"
                     "Reduce the size of an image to 50%"
@@ -44,3 +47,13 @@
                     "RGB*, GRAY*"
                     SF-IMAGE "Image" 0)
 (script-fu-menu-register "unretina" "<Image>/Picturefix")
+
+(script-fu-register "unretina-all"
+                    "Unretina all images"
+                    "Call Unretina image on all loaded images."
+                    "Tom Willemse <tom@ryuslash.org>"
+                    "Tom Willemse"
+                    "2015-05-18"
+                    "RGB*, GRAY*"
+                    0)
+(script-fu-menu-register "unretina-all" "<Image>/Picturefix")
