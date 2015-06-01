@@ -11,7 +11,7 @@
   (car (gimp-image-get-filename image)))
 
 (define (os--unretina-save image)
-  (let* ((parts (os--split-filename (car (os--get-filename image))))
+  (let* ((parts (os--split-filename (os--get-filename image)))
          (newname (string-append (os--string-minus (car parts) 3) "."
                                  (cdr parts))))
     (gimp-file-save RUN-NONINTERACTIVE image
@@ -28,10 +28,10 @@
   image)
 
 (define (oni-size-unretina image)
-  (unretina-save (oni-size-scale-50! image)))
+  (os--unretina-save (oni-size-scale-50! image)))
 
 (define (oni-size-unretina-all)
-  (for-each unretina (vector->list (cadr (gimp-image-list)))))
+  (for-each oni-size-unretina (vector->list (cadr (gimp-image-list)))))
 
 ;;; Command registration
 
