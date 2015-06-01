@@ -12,4 +12,4 @@ of the image."
  "Tom Willemse <tom@ryuslash.org>" "Tom Willemse" "2015-05-18"
  "RGB*, GRAY*" SF-IMAGE "Image" 0)
 
-(script-fu-menu-register "oni-extract-icon!" "<Image>/Picturefix")
+(script-fu-menu-register "oni-extract-icon!" "<Image>/Webwork")

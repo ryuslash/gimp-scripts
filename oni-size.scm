@@ -55,6 +55,6 @@
 
 ;;; Menu registration
 
-(script-fu-menu-register "oni-size-scale-50!" "<Image>/Picturefix")
-(script-fu-menu-register "oni-size-unretina" "<Image>/Picturefix")
-(script-fu-menu-register "oni-size-unretina-all" "<Image>/Picturefix")
+(script-fu-menu-register "oni-size-scale-50!" "<Image>/Webwork")
+(script-fu-menu-register "oni-size-unretina" "<Image>/Webwork")
+(script-fu-menu-register "oni-size-unretina-all" "<Image>/Webwork")
